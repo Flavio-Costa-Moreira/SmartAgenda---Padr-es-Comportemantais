@@ -39,7 +39,7 @@ smartagenda/
   - **`Subject`** e **`Observer`**: interfaces base para implementar o padrão.
   - **`Agenda`**: classe que gerencia tarefas e notifica observadores.
   - **`LoggerObserver`**, **`NotificationObserver`**, **`ActionSuggestor`**: observadores concretos que reagem ao evento.
-- 📍 **Localização:** `src/main/java/com/smartagenda/observer/`
+- **Localização:** `src/main/java/com/smartagenda/observer/`
 
 ---
 
@@ -49,7 +49,7 @@ smartagenda/
   - **`Command`**: interface base para comandos.
   - **`EnviarEmailCommand`**, **`TocarAlarmeCommand`**: comandos concretos que executam ações específicas.
   - Cada tarefa criada é associada a um comando para execução.
-- 📍 **Localização:** `src/main/java/com/smartagenda/command/`
+- **Localização:** `src/main/java/com/smartagenda/command/`
 
 ---
 
@@ -59,7 +59,7 @@ smartagenda/
   - **`EstrategiaExecucao`**: interface para diferentes estratégias.
   - **`ExecucaoImediata`**, **`ExecucaoAtrasada`**: estratégias concretas que definem como a tarefa será executada.
   - A escolha da estratégia pode ser feita dinamicamente.
-- 📍 **Localização:** `src/main/java/com/smartagenda/strategy/`
+- **Localização:** `src/main/java/com/smartagenda/strategy/`
 
 ## 👨‍💻 Autores
 
