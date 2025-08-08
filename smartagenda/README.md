@@ -1,5 +1,7 @@
 # SmartAgenda - Projeto de Padrões de Projeto
 
+Atividade de padrões de projeto, onde de forma prática usaremos os padrões comportamentais para desenvolver uma parte de um sistema chamado SmartAgenda para gerenciamento de atividades automatizadas
+
 **Objetivo:** Implementar um mini-sistema *SmartAgenda* em Java aplicando os padrões:
 - **Observer**: notificar módulos quando nova tarefa é criada.
 - **Command**: cada tarefa encapsulada como um comando executável/desfazer.
