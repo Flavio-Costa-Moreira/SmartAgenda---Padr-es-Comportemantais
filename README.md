@@ -2,7 +2,6 @@
 
 Atividade de padrões de projeto, onde de forma prática usaremos os padrões comportamentais para desenvolver uma parte de um sistema chamado SmartAgenda para gerenciamento de atividades automatizadas
 
-
 **Objetivo:** Implementar um mini-sistema *SmartAgenda* em Java aplicando os padrões:
 - **Observer**: notificar módulos quando nova tarefa é criada.
 - **Command**: cada tarefa encapsulada como um comando executável/desfazer.
@@ -32,7 +31,7 @@ smartagenda/
    java -jar target/smartagenda-1.0-SNAPSHOT-jar-with-dependencies.jar
    ```
 
-## Padrões aplicados (resumo)
+## Padrões aplicados
 - **Observer**: `Agenda` é o Subject; `LoggerObserver` e `NotificationObserver` são Observers. Quando `Agenda.adicionarTarefa(...)` é chamado, todos os observers são notificados.
 - **Command**: Interface `Command` com `executar()` e `desfazer()`. Ex.: `EnviarEmailCommand`, `TocarAlarmeCommand`.
 - **Strategy**: Interface `EstrategiaExecucao` com implementações `ExecucaoImediata` e `ExecucaoAtrasada`. A `Tarefa` recebe uma estratégia no momento da criação.
