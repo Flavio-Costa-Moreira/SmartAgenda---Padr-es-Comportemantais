@@ -31,11 +31,40 @@ smartagenda/
    java -jar target/smartagenda-1.0-SNAPSHOT-jar-with-dependencies.jar
    ```
 
-## Padrões aplicados
-- **Observer**: `Agenda` é o Subject; `LoggerObserver` e `NotificationObserver` são Observers. Quando `Agenda.adicionarTarefa(...)` é chamado, todos os observers são notificados.
-- **Command**: Interface `Command` com `executar()` e `desfazer()`. Ex.: `EnviarEmailCommand`, `TocarAlarmeCommand`.
-- **Strategy**: Interface `EstrategiaExecucao` com implementações `ExecucaoImediata` e `ExecucaoAtrasada`. A `Tarefa` recebe uma estratégia no momento da criação.
+## Padrões de Projeto Aplicados
 
-## Entrega
-Inclui comentários no código indicando onde cada padrão foi aplicado (procure por `// PATTERN: ...`).
+### 1. **Observer**
+- **Objetivo:** Permitir que múltiplos módulos sejam notificados automaticamente quando uma nova tarefa for criada.
+- **Implementação no projeto:**
+  - **`Subject`** e **`Observer`**: interfaces base para implementar o padrão.
+  - **`Agenda`**: classe que gerencia tarefas e notifica observadores.
+  - **`LoggerObserver`**, **`NotificationObserver`**, **`ActionSuggestor`**: observadores concretos que reagem ao evento.
+- 📍 **Localização:** `src/main/java/com/smartagenda/observer/`
 
+---
+
+### 2. **Command**
+- **Objetivo:** Encapsular tarefas como comandos que podem ser executados, agendados ou desfeitos.
+- **Implementação no projeto:**
+  - **`Command`**: interface base para comandos.
+  - **`EnviarEmailCommand`**, **`TocarAlarmeCommand`**: comandos concretos que executam ações específicas.
+  - Cada tarefa criada é associada a um comando para execução.
+- 📍 **Localização:** `src/main/java/com/smartagenda/command/`
+
+---
+
+### 3. **Strategy**
+- **Objetivo:** Definir diferentes formas de executar uma tarefa (flexibilidade no comportamento).
+- **Implementação no projeto:**
+  - **`EstrategiaExecucao`**: interface para diferentes estratégias.
+  - **`ExecucaoImediata`**, **`ExecucaoAtrasada`**: estratégias concretas que definem como a tarefa será executada.
+  - A escolha da estratégia pode ser feita dinamicamente.
+- 📍 **Localização:** `src/main/java/com/smartagenda/strategy/`
+
+## 👨‍💻 Autores
+
+- **Flávio Costa**
+- **Saulo Melo**
+
+📚 **Disciplina:** Padrões de Projeto  
+🏫 **Instituição:** Instituto Federal de Educação, Ciência e Tecnologia da Bahia – Campus Santo Antônio de Jesus - Ba.
